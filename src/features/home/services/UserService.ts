@@ -1,7 +1,7 @@
-import { IUser, API_PATHS } from '../../shared';
-import { USER_API_EXCEPTIONS } from './homeUtils';
+import { IUser, API_PATHS } from '../../../shared';
+import { USER_API_EXCEPTIONS } from '../homeUtils';
 
-class HomeService {
+class UserService {
   async getUsers() {
     try {
       const response = await fetch(API_PATHS.GET_USERS);
@@ -19,4 +19,4 @@ class HomeService {
   }
 }
 
-export default new HomeService();
+export default new UserService();

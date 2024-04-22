@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
-import HomeService from '../HomeService';
-import { Iuser } from '../../../shared';
+import UserService from '../services/UserService';
+import { IUser } from '../../../shared';
 
 // it could use a third-party library like React query
 export const useLoadUsers = () => {
-  const [users, setUsers] = useState<Iuser[] | null>(null);
+  const [users, setUsers] = useState<IUser[] | null>(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const users = await HomeService.getUsers();
+        const users = await UserService.getUsers();
         if (users) {
           setUsers(users);
         }
