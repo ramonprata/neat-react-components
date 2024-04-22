@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Iuser } from './types/IUser';
+import { IUser } from './types/IUser';
 
 const HomePage = () => {
-  const [users, setUsers] = useState<Iuser[] | null>(null);
+  const [users, setUsers] = useState<IUser[] | null>(null);
   const [sortBy, setSortBy] = useState('name');
   const [error, setError] = useState(false);
 

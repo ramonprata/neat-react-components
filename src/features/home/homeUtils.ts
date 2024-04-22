@@ -1,6 +1,6 @@
-import { Iuser, TSortBy } from '../../shared';
+import { IUser, TSortBy } from '../../shared';
 
-export const sortUsers = (users: Iuser[] | null, sortBy: TSortBy) => {
+export const sortUsers = (users: IUser[] | null, sortBy: TSortBy) => {
   if (users?.length) {
     return users.sort((a, b) => {
       if (sortBy === 'name') {
